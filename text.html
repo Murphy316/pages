@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .unshow2 {
+        display: none;
+      }
+      body {
+        /* font-family: Verdana, sans-serif; */
+        margin: 0;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        width: 760px;
+        /* height: 450px; */
+        position: relative;
+        margin: auto;
+      }
+
+      .mySlides {
+        display: none;
+      }
+
+      .mySlides img {
+        width: 55%;
+        height: 400px;
+      }
+
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @-webkit-keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px;
+        }
+      }
+
+      /* Caption text */
+      .text {
+        display: inline-block;
+        position: absolute;
+        width: 45%;
+        height: 400px;
+        background-color: #f5f5f5;
+        text-align: center;
+      }
+
+      .text h2 {
+        text-decoration: underline;
+      }
+
+      .text .ame {
+        font-weight: bold;
+      }
+
+      .text span {
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .text p {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 16px;
+        line-height: 1.3;
+      }
+      .text button {
+        display: block;
+        padding: 5px;
+        position: absolute;
+        bottom: 25px;
+        left: 90px;
+        font-size: 14px;
+        border: 1px solid black;
+        border-radius: 20px;
+      }
+
+      .text button:hover {
+        background-color: pink;
+      }
+
+      @media (max-width: 767px) {
+        .unshow1 {
+          display: none;
+        }
+        /* ========aaaaaaaa */
+        .container3 {
+          background-color: #e8e8e8;
+          height: auto;
+        }
+
+        .container3 {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+
+        .card {
+          background-color: #f5f5f5;
+          width: 500px;
+          margin: 10px;
+          border-radius: 15px;
+          text-align: center;
+        }
+
+        .card-image {
+          height: 230px;
+          background-size: cover;
+        }
+
+        .bkgs3 {
+          background-image: url(./img/standard/standard-1-2.webp);
+        }
+
+        .card h2 {
+          padding: 10px;
+          text-decoration: underline;
+        }
+
+        .card h3 {
+          margin-top: -10px;
+        }
+
+        span {
+          font-size: 15px;
+          line-height: 1.5;
+        }
+
+        .details {
+          padding-left: 20px;
+          padding-right: 20px;
+          line-height: 1.3;
+        }
+
+        button {
+          margin: 0 auto;
+          margin-bottom: 20px;
+          display: block;
+          padding: 5px;
+          font-size: 14px;
+          border: 1px solid black;
+          border-radius: 20px;
+        }
+
+        button:hover {
+          background-color: pink;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slideshow-container unshow1">
+      <div class="mySlides fade">
+        <img src="./img/standard/standard-1-1.webp" />
+        <div class="text">
+          <h2>FAIRFIELD</h2>
+          <h3>Second Floor Suite</h3>
+          <p clas="ame">AMENITIES:</p>
+          <span>OCEAN VIEWS • QUEEN BED</span><br />
+          <span>BAR FRIDGE • COFFEE MAKER</span><br />
+          <span>FLAT SCREEN TV • WIFI</span><br />
+          <span>TUB/SHOWER • HAIR DRYER</span><br />
+          <span>BATH ROBES</span><br />
+          <button>CHECK AVAILABILITY</button>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="./img/standard/standard-1-2.webp" />
+        <div class="text">
+          <h2>FAIRFIELD</h2>
+          <h3>About</h3>
+          <p>
+            Located on second floor of the manor, this cozy and bright guest
+            room offers amazing views of Clover Point Park and the Juan de Fuca
+            Strait, as well as a bit of marine history for guests who are
+            looking for the ultimate Victorian experience. This room was once
+            Mr. Madigan’s bedroom (Edith's father), Chief Engineer of the SS
+            Beaver, the ship that brought Sir James Douglas and his men to
+            Victoria in 1843 as they established the first settlement in
+            Victoria.
+          </p>
+          <button>CHECK AVAILABILITY</button>
+        </div>
+      </div>
+      
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <section class="container3 unshow2">
+      <div class="card">
+        <div class="card-image bkgs3"></div>
+        <h2>FAIRFIELD</h2>
+        <h3>Second Floor Suite</h3>
+        <p>AMENITIES:</p>
+
+        <span>OCEAN VIEWS • QUEEN BED</span><br />
+        <span>BAR FRIDGE • COFFEE MAKER</span><br />
+        <span>FLAT SCREEN TV • WIFI</span><br />
+        <span>TUB/SHOWER • HAIR DRYER</span><br />
+        <span>BATH ROBES</span><br />
+        <div class="details">
+          <h2>About</h2>
+          <p>
+            Located on second floor of the manor, this cozy and bright guest
+            room offers amazing views of Clover Point Park and the Juan de Fuca
+            Strait, as well as a bit of marine history for guests who are
+            looking for the ultimate Victorian experience. This room was once
+            Mr. Madigan’s bedroom (Edith's father), Chief Engineer of the SS
+            Beaver, the ship that brought Sir James Douglas and his men to
+            Victoria in 1843 as they established the first settlement in
+            Victoria.
+          </p>
+
+          <button>CHECK AVAILABILITY</button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>

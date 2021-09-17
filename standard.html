@@ -1,0 +1,159 @@
+<!--
+ * @Author: Murphy
+ * @Date: 2021-07-27 09:12:00
+ * @LastEditTime: 2021-09-16 18:51:07
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="all-room-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="DW">
+      <section class="section1">
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+          </label>
+          <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="#">Book</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+        <img src="./img/DW_logo_1.png" alt="DashWood Logal" class="logal" />
+      </section>
+
+      <section class="section2"><h1>Standard Queen Room</h1></section>
+      <div class="slideshow-container unshow1">
+        <div class="mySlides fade">
+          <img src="./img/standard/standard-1-1.webp" />
+          <div class="text">
+            <h2>FAIRFIELD</h2>
+            <h3>Second Floor Suite</h3>
+            <p clas="ame">AMENITIES:</p>
+            <span>OCEAN VIEWS • QUEEN BED</span><br />
+            <span>BAR FRIDGE • COFFEE MAKER</span><br />
+            <span>FLAT SCREEN TV • WIFI</span><br />
+            <span>TUB/SHOWER • HAIR DRYER</span><br />
+            <span>BATH ROBES</span><br />
+            <button>CHECK AVAILABILITY</button>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="./img/standard/standard-1-2.webp" />
+          <div class="text">
+            <h2>FAIRFIELD</h2>
+            <h3>About</h3>
+            <p>
+              Located on second floor of the manor, this cozy and bright guest
+              room offers amazing views of Clover Point Park and the Juan de
+              Fuca Strait, as well as a bit of marine history for guests who are
+              looking for the ultimate Victorian experience. This room was once
+              Mr. Madigan’s bedroom (Edith's father), Chief Engineer of the SS
+              Beaver, the ship that brought Sir James Douglas and his men to
+              Victoria in 1843 as they established the first settlement in
+              Victoria.
+            </p>
+            <button>CHECK AVAILABILITY</button>
+          </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <section class="container3 unshow2">
+        <div class="card">
+          <div class="card-image bkgs3"></div>
+          <h2>FAIRFIELD</h2>
+          <h3>Second Floor Suite</h3>
+          <p>AMENITIES:</p>
+
+          <span>OCEAN VIEWS • QUEEN BED</span><br />
+          <span>BAR FRIDGE • COFFEE MAKER</span><br />
+          <span>FLAT SCREEN TV • WIFI</span><br />
+          <span>TUB/SHOWER • HAIR DRYER</span><br />
+          <span>BATH ROBES</span><br />
+          <div class="details">
+            <h2>About</h2>
+            <p>
+              Located on second floor of the manor, this cozy and bright guest
+              room offers amazing views of Clover Point Park and the Juan de
+              Fuca Strait, as well as a bit of marine history for guests who are
+              looking for the ultimate Victorian experience. This room was once
+              Mr. Madigan’s bedroom (Edith's father), Chief Engineer of the SS
+              Beaver, the ship that brought Sir James Douglas and his men to
+              Victoria in 1843 as they established the first settlement in
+              Victoria.
+            </p>
+
+            <button>CHECK AVAILABILITY</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section9">
+        <footer class="footer">
+          <!-- <nav>
+            <ul id="nav">
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">ROOMS</a></li>
+              <li><a href="#">PACKAGES</a></li>
+              <li><a href="#">BOOK</a></li>
+              <li><a href="#">EXPLORE</a></li>
+              <li><a href="#">ABOUT</a></li>
+            </ul>
+          </nav> -->
+          <p>
+            Dashwood Manor Seaside Bed & Breakfast<br />
+            1 Cook St, Victoria, BC V8V 3W6 Canada<br />
+            250.385.5517 | reservations@dashwoodmanor.com
+          </p>
+
+          <div class="image_group">
+            <img class="img1" src="./img/1.png" />
+            <img class="img2" src="./img/2.png" />
+            <img class="img3" src="./img/3.png" />
+          </div>
+        </footer>
+      </section>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>
